@@ -2,6 +2,8 @@
 
 \input{slidesHeader.tex}
 
+\newcommand{\command}[1]{$\backslash$#1\{\dots\}}
+
 \title[\LaTeX]{Edición de Textos con \LaTeX}
 
 \author[P. Sánchez]{\alert{Pablo Sánchez}}
@@ -43,29 +45,51 @@
 
 \begin{frame}[c]
 	\frametitle{Bibliografía}
-     %% TODO(Completar)
+    \begin{thebibliography}{Lam94}
+
+    \bibitem[Lam94]{lamport:1994}
+    Leslie Lamport.
+    \newblock {\em \LaTeX: A Document Preparation System}.
+    \newblock Addison-Wesley Professional, 2 edition, Julio 1994.
+
+    \end{thebibliography}
 \end{frame}
 
 \subsection{Conceptos Básicos}
 
-\begin{frame}
+\begin{frame}[c]
     \frametitle{¿Qué es \LaTeX?}
-    %%
+    \begin{enumerate}[<+->]
+        \item Sistema de edición de documentos de textos.
+        \item No \emph{WYSIWYG (``What You See Is What You Get'')}.
+        \item Los documentos son texto plano donde el formato se especifica por medio de comandos y etiquetas (e.g. \emph{$\backslash$section\{Título\}}).
+        \item Construido sobre \TeX.
+        \item Basado en códigos de buenas prácticas internacionales.
+        \item Extensible por medio de paquetes.
+        \item Permite incorporar a los textos elementos complejos, como fórmulas \href{https://es.overleaf.com/learn/latex/Mathematical_expressions}{matemáticas}, \href{https://osl.ugr.es/CTAN/macros/generic/chemfig/chemfig-en.pdf}{moléculas} o 
+            \href{http://tug.ctan.org/info/latex4musicians/latex4musicians.pdf}{partituras}, entre otros, de manera textual (e.g. \texttt{$\backslash$int\_\{a\}\^{}\{b\} x\^{}\{2\}dx} es $\int_{a}^{b} x^{2} dx$).
+        \item Muy utilizado a nivel académico. 
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Ejemplos de Utilización de \LaTeX}
-    %%
-\end{frame}
-
-\begin{frame}
+\begin{frame}[c]
     \frametitle{Elementos Básicos de un Documento \LaTeX}
-    %%
+    \begin{enumerate}[<+->]
+        \item \command{documentclass}
+        \item \command{begin}, \command{end}
+        \item Preámbulo y documento.
+        \item $\backslash$usepackage[utf8]\{inputenc\}
+        \item \command{title}, \command{author}, \command{date}
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Proceso de Generación de un Documento}
-    %%
+\begin{frame}[c]
+    \frametitle{Formatos de Salida}
+    \begin{description}[<+->]
+        \item[DVI] Formato primitivo utilizado por \LaTeX.
+        \item[Postscript] Formato independiente de la plataforma muy aceptado a nivel profesional. Soporta gráficos vectoriales (svg, eps).
+        \item[PDF] Formato compacto de intercambio de documentos electrónicos, independiente de la plataforma. No soporta por defecto gráficos vectoriales.
+    \end{description}
 \end{frame}
 
 \section{Comandos Básicos}
@@ -100,5 +124,13 @@
 		\item To be defined
 	\end{enumerate}
 \end{frame}
+
+%\begin{frame}[c]
+%	\frametitle{Bibliografía}
+%    \nocite{lamport:1994}
+%    \bibliographystyle{alpha}
+%    \bibliography{latex}
+%\end{frame}
+
 
 \end{document}
