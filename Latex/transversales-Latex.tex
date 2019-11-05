@@ -3,6 +3,7 @@
 \input{slidesHeader.tex}
 
 \newcommand{\command}[1]{\texttt{$\backslash$#1\{\dots\}}}
+\newcommand{\singleCommand}[1]{\texttt{$\backslash$#1}}
 \newcommand{\envCommand}[1]{\texttt{$\backslash$begin\{#1\}, $\backslash$end\{#1\}}}
 
 \title[\LaTeX]{Edición de Textos con \LaTeX}
@@ -157,6 +158,15 @@
 \end{frame}
 
 \subsection{Tablas}
+
+\begin{frame}[c]
+    \frametitle{Figuras}
+    \begin{enumerate}[<+->]
+        \item \envCommand{table}
+        \item \envCommand{tabular}
+        \item \singleCommand{hline}
+    \end{enumerate}
+\end{frame}
 
 \subsection{Listados de Código}
 
