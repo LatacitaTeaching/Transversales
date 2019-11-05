@@ -5,6 +5,7 @@
 \newcommand{\command}[1]{\texttt{$\backslash$#1\{\dots\}}}
 \newcommand{\singleCommand}[1]{\texttt{$\backslash$#1}}
 \newcommand{\envCommand}[1]{\texttt{$\backslash$begin\{#1\}, $\backslash$end\{#1\}}}
+\newcommand{\package}[1]{\texttt{$\backslash$usepackage\{#1\}}}
 
 \title[\LaTeX]{Edición de Textos con \LaTeX}
 
@@ -149,7 +150,7 @@
     \frametitle{Figuras}
     \begin{enumerate}[<+->]
         \item \envCommand{figure} 
-        \item \command{includegraphics} (requiere \texttt{$\backslash$usepackage\{graphicx\}})
+        \item \command{includegraphics} (requiere \package{graphicx})
         \item \command{caption}
         \item \command{label}
         \item \command{linewidth}
@@ -169,6 +170,15 @@
 \end{frame}
 
 \subsection{Listados de Código}
+
+\begin{frame}[c]
+    \frametitle{Listados de Código}
+    \begin{enumerate}[<+->]
+        \item \package{listings}
+        \item \envCommand{listing}
+        \item \command{lstinputlisting[language=Octave]}
+    \end{enumerate}
+\end{frame}
 
 \section{Bibliografías e Índices}
 
